@@ -4,14 +4,19 @@ import gradient from 'gradient-string';
 import boxen from 'boxen';
 
 export const showWelcome = () => {
-    const welcomeText = figlet.textSync('ZILA', {
+    const terminalWidth = process.stdout.columns || 80;
+    
+    const welcomeText = figlet.textSync('ZILA  TERMINAL', {
         font: 'ANSI Shadow',
-        horizontalLayout: 'full',
-        width: process.stdout.columns || 120,
+        horizontalLayout: 'fitted',
+        width: terminalWidth,
+        whitespaceBreak: true
     });
 
-    console.log(chalk.blue.bold(welcomeText));
-    console.log(chalk.blue.bold('\n  Zigex Dynamic Intelligent Learning Assistant (ZILA)'));
+    const coloredLogo = gradient(['#00c6ff', '#0072ff', '#00c6ff']).multiline(welcomeText);
+    
+    console.log('\n' + coloredLogo);
+    console.log(chalk.cyan.bold('  Zigex Dynamic Intelligent Learning Assistant (ZILA)'));
     console.log(chalk.gray('  Empowering students with AI-driven career guidance.\n'));
 };
 
