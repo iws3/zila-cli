@@ -1,3 +1,5 @@
+![ZILA CLI Cover](https://i.ibb.co/9mhWtLxN/image.png)
+
 # 🚀 ZILA CLI: Zigex Dynamic Intelligent Learning Assistant
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
